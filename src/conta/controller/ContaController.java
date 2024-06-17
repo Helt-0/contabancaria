@@ -26,7 +26,8 @@ public class ContaController implements ContaRepository {
 
 	@Override
 	public void cadastrar(Conta conta) {
-		// TODO Auto-generated method stub
+		listaContas.add(conta);
+		System.out.println("\nA conta número: "+ conta.getNumero() + " foi criada com sucesso!");
 		
 	}
 
@@ -58,6 +59,9 @@ public class ContaController implements ContaRepository {
 	public void transferir(int numeroOrigem, int numeroDestino, float valor) {
 		// TODO Auto-generated method stub
 		
+	}
+	public int gerarNumero() {
+		return ++ numero;
 	}
 	
 
